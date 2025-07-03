@@ -3,14 +3,14 @@ name="바오"         # 생명체 이름
 energy = 8         # 에너지 수치 (0~10)
 mood = "happy"     # 기분상태
 
-print(f"{name}이(가) 태어났습니다.")
-print(f"에너지: {energy}, 기분: {mood}")
+def act(name, mood, energy):
+    if mood == "happy" and energy >5:
+        print(f"{name}는 산책 나갔어요!🚶‍♂️")
+    elif mood == "tired" or energy < 3:
+        print(f"{name}는 조용히 누워서 자고 있어요 😴")
+    elif mood == "angry":
+        print(f"{name}는 화가 나서 으르릉~~! 소리를 냈어요. 😡💥")
+    else:
+        print(f"{name}는 멍하니 창 밖을 바라보고 있어요. 😶")
 
-
-# 시간 경과 시뮬레이션
-energy -= 2
-mood = "tired"
-
-print("\n시간이 흘렀습니다...")
-print(f"{name}의 현재 에너지: {energy}")
-print(f"{name}의 기분은 이제 {mood}입니다.")
+    act(name, mood, energy)
