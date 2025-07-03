@@ -1,3 +1,11 @@
+# 기억 불러오기
+with open("data/memory.txt", "r", encoding="utf-8") as f:
+    memories = f.readlines()
+
+print("=== 바오의 기억들 ===")
+for line in memories:
+    print("_", line.strip())
+
 # 생명체 초기 상태
 name = "바오"
 energy = 7
